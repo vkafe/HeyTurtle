@@ -1,0 +1,53 @@
+settings = {
+	plugins =
+		{
+			-- key is the name passed to Lua's 'require()'
+			["plugin.google.play.services"] = {
+				-- required
+				publisherId = "com.coronalabs",
+			},
+		},  
+
+	orientation = {
+		default = "portrait",
+		supported = { "portrait", }
+	},
+	
+	iphone = {
+		plist = {
+			CFBundleDisplayName = "GGTwitter",
+			UIStatusBarHidden = true,
+			UIPrerenderedIcon = true,
+			UIApplicationExitsOnSuspend = false,
+			UIAppFonts ={
+				"Amatic-Bold.ttf"
+			},
+			CFBundleIconFiles =
+			{
+				"Icon.png", 
+				"Icon@2x.png", 
+				"Icon-60.png",
+				"Icon-60@2x.png",
+				"Icon-60@3x.png",
+				"Icon-72.png", 
+				"Icon-72@2x.png",
+				"Icon-76.png",
+				"Icon-76@2x.png", 
+				"Icon-Small.png", 
+				"Icon-Small@2x.png",
+				"Icon-Small@3x.png",
+				"Icon-Small-40.png",
+				"Icon-Small-40@2x.png",
+				"Icon-Small-50.png", 
+				"Icon-Small-50@2x.png",
+			},
+		}
+	},
+	
+	-- Android permissions
+	androidPermissions = {
+			"android.permission.INTERNET",
+			"android.permission.ACCESS_NETWORK_STATE",
+		},
+}
+
